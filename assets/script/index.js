@@ -9,7 +9,7 @@ const shapeContainer = Utils.select('.shape-container');
 const shapeOutput = Utils.select('.shape-info');
 
 let numberOfShapes = 0;
-const shapes = [];
+
 
 function checkAmount() {
   if (numberOfShapes < 25) {
@@ -21,8 +21,7 @@ function create () {
   let newShapeType = shapeType.value;
   let newShapeColor = shapeColor.value;
   if (newShapeColor !== 'Color' && newShapeType !== "Shape") {
-    const newShape = new Utils.Shape(newShapeType, newShapeColor);
-    shapes.push(newShape);
+    const newShape = new Utils.Shape(newShapeType, newShapeColor, numberOfShapes);
     const shapeDiv = document.createElement('div');
     shapeDiv.className = `shape ${newShapeColor} ${newShapeType}`;
     Utils.listen('click', shapeDiv, () => {
@@ -35,7 +34,6 @@ function create () {
 }
 
 function shapeInfo (newShapeInfo) {
-  console.log(newShapeInfo);
   shapeOutput.innerText = newShapeInfo;
 }
 

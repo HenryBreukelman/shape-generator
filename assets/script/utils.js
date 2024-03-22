@@ -49,10 +49,12 @@ export function print(...args) {
 export class Shape {
   #shape;
   #color;
+  #number;
 
-  constructor(shape, color) {
+  constructor(shape, color, number) {
     this.#shape = shape;
     this.#color = color;
+    this.#number = number
   }
 
   get shape() {
@@ -63,7 +65,11 @@ export class Shape {
     return this.#color;
   }
 
+  get number() {
+    return this.#number;
+  }
+
   getShapeInfo() {
-    return `Shape: ${this.#shape}, Colour: ${this.#color}`
+    return `Unit: ${this.#number + 1}, Shape: ${this.#shape}, Color: ${this.#color}`
   }
 }
