@@ -47,5 +47,23 @@ export function print(...args) {
 
 //shape
 export class Shape {
+  #shape;
+  #color;
 
+  constructor(shape, color) {
+    this.#shape = shape;
+    this.#color = color;
+  }
+
+  get shape() {
+    return this.#shape;
+  }
+
+  get color() {
+    return this.#color;
+  }
+
+  getShapeInfo() {
+    return `Shape: ${this.#shape}, Colour: ${this.#color}`
+  }
 }

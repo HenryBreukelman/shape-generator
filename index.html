@@ -22,8 +22,28 @@
     <script src="./assets/script/index.js" type="module"></script> <!-- defer -->
   </head>
   <body>
-    <main>
-
+    <main class="center">
+      <h2>Shape Generator</h2>
+      <form>
+        <select class="shape-type">
+          <option selected disabled hidden>Shape</option>
+          <option>circle</option>
+          <option>square</option>
+        </select>
+        <select class="shape-color">
+          <option selected disabled hidden>Colour</option>
+          <option>blue</option>
+          <option>green</option>
+          <option>orange</option>
+          <option>purple</option>
+          <option>pink</option>
+        </select>
+        <input type="button" class="make-shape" value="Create">
+      </form>
+      <div class="shape-container">
+      </div>
+      <div class="shape-info">
+      </div>
     </main>
   </body>
 </html>

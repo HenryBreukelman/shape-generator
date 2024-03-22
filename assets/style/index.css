@@ -1,35 +1,85 @@
 @charset "utf-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    width: min(100% - 30px, 1080px);
-    margin-inline: auto;
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .spacebetween {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .center {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 body {
-    font-family: 'Nunito', sans-serif, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif, Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
 /*
-    Content
+  Content
 */
 
+h2 {
+  font-size: 30px;
+  margin: 10px 0;
+}
 
+.shape-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: start;
+  gap: 10px;
+  padding: 10px;
+  width: 460px;
+  height: 460px;
+  background-color: rgba(0 0 0 / 0.07);
+  border-radius: 8px;
+}
+
+.shape {
+  width: 80px;
+  height: 80px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: #09f;
+}
+
+.green {
+  background-color: #9f0;
+}
+
+.orange {
+  background-color: #f90;
+}
+
+.pink {
+  background-color: #f09;
+}
+
+.purple {
+  background-color: #90f;
+}
